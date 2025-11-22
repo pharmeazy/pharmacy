@@ -1,5 +1,6 @@
+require("dotenv").config();
 const mongoose= require('mongoose');//mongodb 
-const MONGO_URL='add mongodb url';
+const MONGO_URL= process.env.MONGO_URL;
 // adding event listeners
 mongoose.connection.once('open',()=>{
     console.log('mongodb connection ready');
